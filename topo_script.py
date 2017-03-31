@@ -13,15 +13,15 @@ class nialltopo(Topo):
 	
 		super(nialltopo, self). __init__(**opts)
 		
-		host0 = self.addHost('h0')
+	host0 = self.addHost('h0')
         host1 = self.addHost('h1')
 		
-		switch0 = self.addSwitch('s0')
+	switch0 = self.addSwitch('s0')
         switch1 = self.addSwitch('s1')
 		
-		self.addLink(host0, switch0) # s0.port_1: host0
+	self.addLink(host0, switch0) # s0.port_1: host0
         self.addLink(host1, switch1) # s1.port_2: host1
-		self.addLink(switch0, switch1) # s0.port_2: s1.port_2:
+	self.addLink(switch0, switch1) # s0.port_2: s1.port_2:
 		
 topos = {'nialltopo': (lambda: nialltopo()) }
 
